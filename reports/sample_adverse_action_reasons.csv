@@ -1,0 +1,9 @@
+member_id,score,predicted_pd,principal_reasons
+5,513.0,0.2904,Low account balance relative to income; Income not from a recurring source; Bank account too new; Income deposits too low
+6,535.0,0.1579,Low account balance relative to income; Income deposits too low; Bank account too new; Requested amount too high relative to income
+12,533.0,0.1671,Low account balance relative to income; Bank account too new; Income not from a recurring source; Income deposits too low
+15,546.0,0.114,Low account balance relative to income; Bank account too new; Income deposits too low; Requested amount too high relative to income
+17,546.0,0.1133,Low account balance relative to income; Bank account too new; Income not from a recurring source; Income deposits too low
+20,552.0,0.0948,Low account balance relative to income; Bank account too new; Income deposits too low; Requested amount too high relative to income
+24,528.0,0.1971,Low account balance relative to income; Income not from a recurring source; Income deposits too low; Requested amount too high relative to income
+26,524.0,0.2208,Low account balance relative to income; Income not from a recurring source; Bank account too new; Income deposits too low

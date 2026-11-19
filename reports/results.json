@@ -1,0 +1,177 @@
+{
+  "split": {
+    "train": 14797,
+    "validation": 5063,
+    "out_of_time": 10140
+  },
+  "champion_scorecard": {
+    "train": {
+      "auc": 0.7265,
+      "gini": 0.453,
+      "ks": 0.3412,
+      "bad_rate": 0.099,
+      "n": 14797
+    },
+    "validation": {
+      "auc": 0.7163,
+      "gini": 0.4327,
+      "ks": 0.3458,
+      "bad_rate": 0.0992,
+      "n": 5063
+    },
+    "out_of_time": {
+      "auc": 0.705,
+      "gini": 0.41,
+      "ks": 0.3118,
+      "bad_rate": 0.1092,
+      "n": 10140
+    },
+    "psi_dev_vs_oot": 0.0042
+  },
+  "challenger_xgboost": {
+    "train": {
+      "auc": 0.7745,
+      "gini": 0.5491,
+      "ks": 0.4097,
+      "bad_rate": 0.099,
+      "n": 14797
+    },
+    "validation": {
+      "auc": 0.7267,
+      "gini": 0.4535,
+      "ks": 0.3474,
+      "bad_rate": 0.0992,
+      "n": 5063
+    },
+    "out_of_time": {
+      "auc": 0.7146,
+      "gini": 0.4293,
+      "ks": 0.3282,
+      "bad_rate": 0.1092,
+      "n": 10140
+    },
+    "psi_dev_vs_oot": 0.0052
+  },
+  "information_value": {
+    "ending_balance_to_income": 0.469,
+    "avg_daily_balance_to_income": 0.456,
+    "min_balance_to_income": 0.417,
+    "pct_days_negative": 0.353,
+    "est_monthly_income": 0.316,
+    "balance_trend_to_income": 0.31,
+    "income_concentration": 0.183,
+    "overdraft_events": 0.153,
+    "requested_to_income": 0.151,
+    "balance_volatility_to_income": 0.109,
+    "account_age_months": 0.107,
+    "paycheck_gap_cv": 0.091,
+    "detected_pay_period_days": 0.057,
+    "paycheck_count": 0.03,
+    "days_since_last_paycheck": 0.022
+  },
+  "xgb_importance": {
+    "ending_balance_to_income": 0.2003,
+    "pct_days_negative": 0.1284,
+    "avg_daily_balance_to_income": 0.1271,
+    "est_monthly_income": 0.1234,
+    "min_balance_to_income": 0.0767,
+    "balance_trend_to_income": 0.0632,
+    "account_age_months": 0.0478,
+    "paycheck_gap_cv": 0.0467,
+    "requested_to_income": 0.0357,
+    "income_concentration": 0.0343,
+    "overdraft_events": 0.027,
+    "paycheck_count": 0.0267,
+    "balance_volatility_to_income": 0.0242,
+    "detected_pay_period_days": 0.0206,
+    "days_since_last_paycheck": 0.0179
+  },
+  "chosen_policy": {
+    "approval_rate": 0.5,
+    "cutoff_pd": 0.0802,
+    "cutoff_score": 558.0
+  },
+  "strategy_comparison": [
+    {
+      "strategy": "A. Approve all, flat $100",
+      "approval_rate": 1.0,
+      "first_advance_co_rate": 0.1043,
+      "avg_advance": 100.0,
+      "originations_per_member": 811.88,
+      "net_loss_rate_of_originations": 0.0398,
+      "revenue_per_member": 65.52,
+      "loss_per_member": 32.32,
+      "contribution_per_member": -3.23,
+      "contribution_per_1000_applicants": -3229.0,
+      "payback_month": NaN
+    },
+    {
+      "strategy": "B. Model cutoff, flat $100",
+      "approval_rate": 0.5,
+      "first_advance_co_rate": 0.0469,
+      "avg_advance": 100.0,
+      "originations_per_member": 945.68,
+      "net_loss_rate_of_originations": 0.0198,
+      "revenue_per_member": 75.8,
+      "loss_per_member": 18.69,
+      "contribution_per_member": 18.82,
+      "contribution_per_1000_applicants": 9411.0,
+      "payback_month": 6.0
+    },
+    {
+      "strategy": "C. Model cutoff, risk-based limits",
+      "approval_rate": 0.5,
+      "first_advance_co_rate": 0.0457,
+      "avg_advance": 118.72,
+      "originations_per_member": 1126.34,
+      "net_loss_rate_of_originations": 0.0143,
+      "revenue_per_member": 85.88,
+      "loss_per_member": 16.11,
+      "contribution_per_member": 30.91,
+      "contribution_per_1000_applicants": 15456.0,
+      "payback_month": 5.0
+    },
+    {
+      "strategy": "D. Risk-based limits + increases after clean repayment",
+      "approval_rate": 0.5,
+      "first_advance_co_rate": 0.0457,
+      "avg_advance": 268.5,
+      "originations_per_member": 2507.14,
+      "net_loss_rate_of_originations": 0.0171,
+      "revenue_per_member": 122.65,
+      "loss_per_member": 42.95,
+      "contribution_per_member": 36.91,
+      "contribution_per_1000_applicants": 18456.0,
+      "payback_month": 5.0
+    }
+  ],
+  "challenger_uplift_per_1000_applicants": 1384.0,
+  "pricing_sensitivity": [
+    {
+      "membership_fee_month": 4.99,
+      "optimal_approval_rate": 0.4,
+      "contribution_per_1000_applicants": 12324.0
+    },
+    {
+      "membership_fee_month": 5.99,
+      "optimal_approval_rate": 0.45,
+      "contribution_per_1000_applicants": 15328.0
+    },
+    {
+      "membership_fee_month": 6.99,
+      "optimal_approval_rate": 0.5,
+      "contribution_per_1000_applicants": 18456.0
+    },
+    {
+      "membership_fee_month": 7.99,
+      "optimal_approval_rate": 0.55,
+      "contribution_per_1000_applicants": 22100.0
+    },
+    {
+      "membership_fee_month": 8.99,
+      "optimal_approval_rate": 0.55,
+      "contribution_per_1000_applicants": 25760.0
+    }
+  ],
+  "historical_first_advance_chargeoff_rate": 0.1025
+}

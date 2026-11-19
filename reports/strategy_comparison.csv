@@ -1,0 +1,5 @@
+strategy,approval_rate,first_advance_co_rate,avg_advance,originations_per_member,net_loss_rate_of_originations,revenue_per_member,loss_per_member,contribution_per_member,contribution_per_1000_applicants,payback_month
+"A. Approve all, flat $100",1.0,0.1043,100.0,811.88,0.0398,65.52,32.32,-3.23,-3229.0,
+"B. Model cutoff, flat $100",0.5,0.0469,100.0,945.68,0.0198,75.8,18.69,18.82,9411.0,6.0
+"C. Model cutoff, risk-based limits",0.5,0.0457,118.72,1126.34,0.0143,85.88,16.11,30.91,15456.0,5.0
+D. Risk-based limits + increases after clean repayment,0.5,0.0457,268.5,2507.14,0.0171,122.65,42.95,36.91,18456.0,5.0
